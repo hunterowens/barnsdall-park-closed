@@ -11,7 +11,9 @@ $(function() {
 
     // start counting July 1, 2015 12am
     var start_date =    moment("2020-03-20T23:00:00.000Z");
-
+    
+    // budget passed on July 6, 2017 4:34pm
+    var end_date   =    moment("2021-05-15T16:34:00.000Z")
     updateClock();
 
     setInterval(function(){
@@ -19,7 +21,7 @@ $(function() {
     }, 1000);
 
     function updateClock(){
-        clock = moment(moment().diff(start_date));
+        clock = moment(end_date.diff(start_date));
         // console.log(clock)
         $("#years").html(clock.get('year') - 1970);
         $("#months").html(clock.get('month'));
